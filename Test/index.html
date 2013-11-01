@@ -4,72 +4,23 @@
     <title></title>
     <meta charset="utf-8">
 
-
-    <!--<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />-->
-
     <script src="cordova.js"></script>
-    <script src="www/statusbar.js"></script>
-    <!--<script src="kendo/js/jquery.min.js"></script>
-    <script src="kendo/js/kendo.mobile.min.js"></script>-->
-    
-
-    
+    <script src="statusbar.js"></script>
+    <!--
+	<link href="kendo/styles/kendo.mobile.all.min.css" rel="stylesheet" />
+	<script src="kendo/js/jquery.min.js"></script>
+    <script src="kendo/js/kendo.mobile.min.js"></script>
+	-->
 </head>
 <body>
-    
-
-
-    
-    <style>
-        .km-on-ios .km-header .km-navbar
-        {
-            background-color: deeppink;
-        }
-    
-        .km-on-ios .km-header .km-widget,
-        .km-on-ios .km-header .km-view-title
-        {
-            color: white;
-        }
-    </style>
-    
-    Hello World2
-
-    
-    <!--
-    <div data-role="view" data-title="Pink">
-        <header data-role="header">
-            <div data-role="navbar">
-                <div data-role="view-title"></div>
-            </div>
-        </header>
-        Hello world!
-    </div>
-    <script>
-        new kendo.mobile.Application(document.body, {
-            statusBarStyle: "black-translucent"
-        });
-
-        /*document.addEventListener('deviceready', function() {
-        	var ios = device.platform.match(/ios/i) && 
-                parseFloat(device.version) >= 7.0;
-
-	        if (updateStatusBar) {
-    	        document.body.style.marginTop = '20px';
-        	}
-        });*/
-    </script>
--->
+    Hello World
     
     <script>
-        /*var updateStatusBar = navigator.userAgent.match(/iphone|ipad|ipod/i) &&
-            parseInt(navigator.appVersion.match(/OS (\d)/)[1], 10) >= 7;
-
-        if (updateStatusBar) {
-            document.body.style.marginTop = '20px';
-        }*/
-        alert(typeof StatusBar);
-        alert(StatusBar.isVisible);
+        function onDeviceReady() {
+            alert(StatusBar.isVisible);
+        }
+        
+        document.addEventListener('deviceready', onDeviceReady, false);
     </script>
 </body>
 </html>
